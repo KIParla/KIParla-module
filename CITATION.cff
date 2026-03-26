@@ -1,0 +1,16 @@
+type: dataset
+cff-version: 1.2.0
+message: "If you use this data, please cite it as below."
+title: "MODULE_TITLE"
+authors:
+- family-names: "FAMILY_NAME"
+  given-names: "GIVEN_NAME"
+  orcid: "https://orcid.org/XXXX-XXXX-XXXX-XXXX"
+version: 1.0.0
+identifiers:
+  - description: "The concept DOI of the work"
+    type: doi
+    value: XXXXXXXX
+date-released: YYYY-MM-DD
+repository-code: "https://github.com/KIParla/MODULE_REPO"
+license: CC-BY-NC-SA-4.0

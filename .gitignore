@@ -1,0 +1,4 @@
+*.pfsx
+*.bak
+.DS*
+*.zip
