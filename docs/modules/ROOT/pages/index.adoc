@@ -1,0 +1,3 @@
+= MODULE_NAME
+
+Hello from MODULE_NAME.
