@@ -84,7 +84,7 @@ Each token is represented as 13 columns, as follows:
    - `shortpause` that identify pauses
    - `unknown` that identify unintelligible spans in transcription
    - `error` is a residual class to mark cases where the transcription is not well formed according to Jefferson format. Therefore, the token is not analyzed and transcription will be corrected in future releases.
-7. `variation` encodes whether the transcription unit includes code mixing with dialects. In this case, all tokens in the unit have `some` as a value, otherwise `none` is used.
+7. `variation` encodes whether the transcription unit includes code mixing with dialects: `all` when the whole TU is marked non-Italian (`#_` prefix), `unspecified` when the TU carries an explicit `# ` prefix without attributing it to specific tokens, `yes` when one or more individual tokens carry their own `#`/`$`/`#*` marker, otherwise `none`.
 8. `jefferson_feats`: the column collects a list of word-level features derived from the transcription in Jefferson format. More specifically:
    - `SpaceAfter=No`: no whitespace between this token and the next (e.g., `l'` in `l'anno`)
    - `ProsodicLink=Yes`: a prosodic link (=) to the following token,
