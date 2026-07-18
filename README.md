@@ -2,6 +2,14 @@
 
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 
+> **Template setup — remove this note once done.** This template does not include
+> `.github/workflows/notify-docs-site.yml`, since a module only needs it once it's
+> actually been added to `docs-site/antora-playbook.yml`'s `content.sources` (dispatching
+> a rebuild before that point is a no-op). Once your module is wired in there, copy
+> `notify-docs-site.yml` from another module repo (e.g. `KIParla/ParlaBO`) into
+> `.github/workflows/`, and add the `DOCS_SITE_TOKEN` secret to this repo
+> (Settings → Secrets and variables → Actions) — see the copied file's header comment.
+
 - [MODULE_NAME](#module_name)
 	- [Repository organization](#repository-organization)
 	- [Metadata](#metadata)
