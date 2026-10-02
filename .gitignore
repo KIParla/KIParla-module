@@ -7,3 +7,5 @@
 
 # Transcribers' EAF files: kept locally, not tracked (eaf/ is regenerated from tsv/)
 original/
+.vscode/
+*.xlsx
