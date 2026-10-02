@@ -1,4 +1,5 @@
-# Copy this file into .github/workflows/ of each module repo (KIP, KIPasti, ParlaBO, ParlaTO).
+# Copy this file into .github/workflows/ of each module repo (KIP, KIPasti, ParlaBO, ParlaTO, ParlaBZ,
+# Stra-ParlaBO, Stra-ParlaTO).
 # Rename it to notify-collection.yml in the module repo.
 #
 # Required secret in each module repo:
