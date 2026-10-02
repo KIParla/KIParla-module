@@ -1,0 +1,34 @@
+= Transcription conventions — MODULE_NAME
+:guidelines-version: 1.0
+
+MODULE_NAME follows the xref:portal:transcription-conventions.adoc[KIParla
+transcription conventions], version {guidelines-version}.
+
+The sections below are the *only* points where MODULE_NAME differs from or adds
+to the shared conventions. Anything not listed here follows the shared page
+unchanged.
+
+== Extensions
+
+Symbols or uses that the shared conventions do not define, added by MODULE_NAME.
+
+_None._
+
+// Example:
+// === `&` — reading aloud
+// Placed before a token read aloud from a written source.
+// See xref:portal:transcription-conventions.adoc#code-switching[] for the
+// analogous case.
+
+== Overrides
+
+Cases where MODULE_NAME applies a different or stricter rule than the shared
+conventions.
+
+_None._
+
+// Example:
+// === Short pause `(.)` timing
+// Overrides xref:portal:transcription-conventions.adoc#pauses[Pauses]: in
+// MODULE_NAME `(.)` is used only for pauses below 0.15 s; longer silences are
+// always timed.
