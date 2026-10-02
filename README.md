@@ -29,6 +29,7 @@ This repository contains:
 
 * metadata for both speakers and conversations, in the [`metadata`](./metadata/) subfolder (see [metadata](#metadata) section below)
 * descriptions of the set of transcription conventions used for this module ([Transcription conventions](./jefferson-notation.md))
+* statistical summaries of each conversation and a module-level `snapshot.json` (token counts, speaking time per speaker, token/time rates, overlaps), in the [`summaries`](./summaries/) subfolder, produced by `summarize.py` from the `tsv/` files
 
 For each conversation you will find:
 
