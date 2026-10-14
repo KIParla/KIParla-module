@@ -29,11 +29,10 @@ This repository contains:
 
 * metadata for both speakers and conversations, in the [`metadata`](./metadata/) subfolder (see [metadata](#metadata) section below)
 * descriptions of the set of transcription conventions used for this module ([Transcription conventions](./enriched-notation.md))
-* statistical summaries of each conversation (token counts, speaking time per speaker, token/time rates, overlaps) are not in this repository: they are in the folder of this module in [KIParla-summaries](https://github.com/KIParla/KIParla-summaries)
 
 For each conversation you will find:
 
-* `.eaf` file in [`eaf/`](./eaf/) folder: time-aligned enriched transcriptions (open with [ELAN](https://archive.mpi.nl/tla/elan)). These files are regenerated from the verticalized `tsv/` files, so they contain the normalized transcription (see [Verticalized content](#verticalized-content)); the audio is linked by relative path (`<code>.mp3`).
+* `.eaf` file in [`eaf/`](./eaf/) folder: time-aligned enriched transcription, to be opened with [ELAN](https://archive.mpi.nl/tla/elan). For each speaker there are the tiers `ref@<speaker>` (the Transcription Units, time-aligned; the value is the `tu_id` of the `tsv/` file), `tx@<speaker>` (the enriched transcription of the unit: **the tier to edit**) and, in modules with translations, `ft@<speaker>` (free translation). The files are generated from the verticalized `tsv/` files, so they contain the normalized transcription (see [Verticalized content](#verticalized-content)); the audio is linked by relative path (`<code>.mp3`). After editing an `.eaf`, `sync.py --from-eaf` (in the [tools](https://github.com/KIParla/tools) repository) updates the `tsv/` file keeping `tu_id`, `token_id` and the annotations that exist only in the tsv (see [The ELAN file](https://github.com/KIParla/tools/blob/main/docs/modules/ROOT/pages/eaf-structure.adoc)).
 * `.txt` file in [`linear-enriched/`](./linear-enriched/) folder: linearized enriched transcription.
 * `.txt` file in [`linear-orthographic/`](./linear-orthographic/) folder: linearized transcription retaining only orthographic words.
 * `.tsv` file in [`tsv/`](./tsv/) folder: verticalized version of the transcription, with enriched information decoupled from the text as features. See [Verticalized content](#verticalized-content) for more information.
@@ -47,8 +46,7 @@ Each participant and each conversation are associated to a series of metadata, t
 Metadata is to be interpreted as follows:
 
 1. Participants metadata:
-	- `code`: unique anonymized 5-char identifier for each participant. Unknown, occasional participants
-	 to conversations are associated with a special `???` code.
+	- `code`: unique anonymized 5-char identifier for each participant. Unidentified or occasional participants are not given an individual code: they are transcribed with a placeholder made only of question marks, which has a row in this table with all other fields set to `_`. Within a conversation, placeholders are assigned in order of first appearance: `??` for the first unidentified speaker (and the only one, in most conversations), then `???`, `????`, and so on. The same placeholder in different conversations does not refer to the same person.
 	- `gender`: either `M` for masculine or `F` for feminine
 	- `age-range`: 5 years range including the participant's age.
 	- `birth-region`: Italian region[^1] where the participant was born. If outside Italy, the label `estero` is used.
